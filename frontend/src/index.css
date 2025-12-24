@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neu-bg: #e0e5ec;
+  --color-neu-text: #4a5568;
+  --shadow-neu-flat: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  --shadow-neu-pressed: inset 6px 6px 10px 0 rgba(163, 177, 198, 0.7), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.8);
+  --shadow-neu-sm: 5px 5px 10px #b8b9be, -5px -5px 10px #ffffff;
+
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-scale-in: scale-in 0.3s ease-out;
+  --animate-fade-in-down: fade-in-down 0.5s ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  background-color: var(--color-neu-bg);
+  color: var(--color-neu-text);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Neumorphism Utilities */
+.neu-card {
+  background: var(--color-neu-bg);
+  box-shadow: var(--shadow-neu-flat);
+  border-radius: 20px;
+  border: none;
+}
+
+.neu-btn {
+  background: var(--color-neu-bg);
+  box-shadow: var(--shadow-neu-flat);
+  border-radius: 50px;
+  color: var(--color-neu-text);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.neu-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 12px 12px 20px rgb(163, 177, 198, 0.7), -12px -12px 20px rgba(255, 255, 255, 0.6);
+}
+
+.neu-btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-neu-pressed);
+}
+
+.neu-btn-primary {
+  background: #6d5dfc;
+  color: white;
+  box-shadow: 5px 5px 10px rgba(109, 93, 252, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+
+.neu-btn-primary:hover {
+  background: #5b4ddb;
+}
+
+.neu-btn-danger {
+  color: #e53e3e;
+}
+
+.neu-input {
+  background: var(--color-neu-bg);
+  box-shadow: var(--shadow-neu-pressed);
+  border-radius: 15px;
+  border: none;
+  padding: 12px 20px;
+  outline: none;
+  width: 100%;
+  color: var(--color-neu-text);
+}
+
+.neu-input:focus {
+  box-shadow: inset 3px 3px 5px #b8b9be, inset -3px -3px 5px #ffffff;
+}
+
+/* Custom styling for select dropdowns to match Neumorphism */
+select.neu-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+  /* Space for the arrow */
+}
+
+/* Neumorphic Switch */
+.neu-checkbox {
+  appearance: none;
+  width: 50px;
+  height: 26px;
+  background: var(--color-neu-bg);
+  box-shadow: var(--shadow-neu-pressed);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.neu-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4a5568;
+  /* Default text color or gray */
+  box-shadow: var(--shadow-neu-flat);
+  transition: all 0.3s ease;
+}
+
+.neu-checkbox:checked::after {
+  transform: translateX(24px);
+  background: #6d5dfc;
+  /* Primary color */
+}
+
+.neu-checkbox:checked {
+  /* Optional: indicate active state on track */
+}
