@@ -95,9 +95,9 @@ npm test
 ## 📖 Documentație
 
 Documentația detaliată este disponibilă în repository:
-- [Prezentare Arhitectură](ARCHITECTURE.md) ([RO](ARCHITECTURE_RO.md))
-- [Ghid de Utilizare](USER_GUIDE.md) ([RO](USER_GUIDE_RO.md))
+- [Prezentare Arhitectură](ARCHITECTURE.md)
+- [Ghid de Utilizare](USER_GUIDE.md) 
 
 ## 📄 Licență
 
-Acest proiect este licențiat sub Licența MIT - vezi fișierul [LICENSE](LICENSE) pentru detalii.
+Acest proiect este licențiat sub Licența MIT - vezi fișierul [LICENSE](LICENTA.MD) pentru detalii.
