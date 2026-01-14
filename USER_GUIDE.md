@@ -1,39 +1,39 @@
-# User Guide - Virtual Library
+# Ghid de Utilizare - Biblioteca Virtuală
 
-## Accessing the Platform
-Address: `http://localhost:5173` (Local Development)
+## Accesarea Platformei
+Adresa: `http://localhost:5173` (Dezvoltare Locală)
 
-## Roles & Workflows
+## Roluri & Fluxuri de Lucru
 
-### 1. Student / Professor
-**Goal**: Borrow and read books.
-1. **Register/Login**: Use email to receive an OTP.
-2. **Dashboard**:
-   - **Catalog Tab**: Search for books by title or ISBN. Filter by Name/Details/Credits (Professor only).
-   - **My Loans Tab**: View active loans.
-3. **Borrowing**: Click "Împrumutăm" on a book availability.
-4. **Reading**: If an E-Book, click "Citește" to open the PDF.
-5. **Returning**: Click "Returnează" to end a loan.
+### 1. Student / Profesor
+**Scop**: Împrumutarea și citirea cărților.
+1. **Înregistrare/Autentificare**: Folosiți email-ul pentru a primi un cod OTP.
+2. **Panou de Control (Dashboard)**:
+   - **Tab-ul Catalog**: Căutați cărți după titlu sau ISBN. Filtrați după Nume/Detalii/Credite (doar pentru Profesori).
+   - **Tab-ul Împrumuturile Mele**: Vizualizați împrumuturile active.
+3. **Împrumut**: Apăsați "Împrumută" pe o carte disponibilă.
+4. **Citire**: Dacă este un E-Book, apăsați "Citește" pentru a deschide PDF-ul.
+5. **Returnare**: Apăsați "Returnează" pentru a încheia un împrumut.
 
-### 2. Author
-**Goal**: Publish books.
-1. **Upload**: Navigate to "Book Upload". Fill in Title, ISBN, Description.
-2. **Files**: Upload Cover Image (JPG/PNG) and Book File (PDF).
-3. **Status**: Books are initially "Pending" until approved by a Librarian.
+### 2. Autor
+**Scop**: Publicarea cărților.
+1. **Încărcare**: Navigați la "Adaugă Carte". Completați Titlul, ISBN-ul, Descrierea.
+2. **Fișiere**: Încărcați Imaginea de Copertă (JPG/PNG) și Fișierul Cărții (PDF).
+3. **Status**: Cărțile sunt inițial "În Așteptare" până la aprobarea de către un Bibliotecar.
 
-### 3. Librarian
-**Goal**: Manage library inventory.
-1. **Approvals**: Check "Cărți în Așteptare".
-2. **Review**: Download the PDF to verify content.
-3. **Action**: Click "Aprobă" or "Respinge". Approved books become visible in the Catalog.
+### 3. Bibliotecar
+**Scop**: Gestionarea inventarului bibliotecii.
+1. **Aprobări**: Verificați secțiunea "Cărți în Așteptare".
+2. **Revizuire**: Descărcați PDF-ul pentru a verifica conținutul.
+3. **Acțiune**: Apăsați "Aprobă" sau "Respinge". Cărțile aprobate devin vizibile în Catalog.
 
 ### 4. Admin
-**Goal**: Manage users.
-1. **User List**: View all registered users.
-2. **Search/Sort**: Filter by Name, Email, or Role.
-3. **Activation**: Deactivate suspicious accounts or reactivate them.
-4. **Create User**: Manually add specific roles if needed.
+**Scop**: Gestionarea utilizatorilor.
+1. **Lista Utilizatori**: Vizualizați toți utilizatorii înregistrați.
+2. **Căutare/Sortare**: Filtrați după Nume, Email sau Rol.
+3. **Activare**: Dezactivați conturile suspecte sau reactivați-le.
+4. **Creare Utilizator**: Adăugați manual roluri specifice dacă este necesar.
 
-## Troubleshooting
-- **No Email OTP?**: Check the backend console logic (in dev mode, OTP is logged).
-- **Upload Failed?**: Ensure files are under the size limit (50MB for PDF).
+## Depanare
+- **Nu primiți Email OTP?**: Verificați consola backend-ului (în modul dev, codul OTP este afișat în consolă).
+- **Încărcarea a eșuat?**: Asigurați-vă că fișierele sunt sub limita de mărime (50MB pentru PDF).

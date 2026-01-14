@@ -1,103 +1,103 @@
-# 📚 Virtual Library Manager
+# 📚 Manager Bibliotecă Virtuală
 
-> A modern, full-stack library management system featuring a **Neumorphic Design** interface and **Role-Based Access Control**.
+> Un sistem modern de gestiune a bibliotecii, full-stack, având o interfață cu **Design Neumorphic** și **Control al Accesului Bazat pe Roluri (RBAC)**.
 
-![Neumorphism UI](frontend/public/logo.png)
+![Interfață Neumorphism](frontend/public/logo.png)
 
-## 🌟 Features
+## 🌟 Funcționalități
 
-- **🎨 Neumorphic UI**: A soft, plastic design aesthetic for a premium user experience.
-- **🔐 Role-Based Access Control (RBAC)**: Distinct dashboards and permissions for **Students**, **Professors**, **Authors**, **Librarians**, and **Admins**.
-- **📖 E-Book Reading**: Integrated PDF viewer for digital loans.
-- **🔄 Loan Management**: Complete cycle for borrowing, returning, and extending book loans.
-- **🔒 Secure Authentication**: Email-based OTP (One-Time Password) login system.
-- **📊 Real-time Dashboard**: Live statistics and status updates.
+- **🎨 Interfață Neumorphic**: O estetică de design "soft plastic" pentru o experiență de utilizare premium.
+- **🔐 Control al Accesului (RBAC)**: Panouri și permisiuni distincte pentru **Studenți**, **Profesori**, **Autori**, **Bibliotecari** și **Administratori**.
+- **📖 Citire E-Book**: Vizualizator PDF integrat pentru împrumuturi digitale.
+- **🔄 Managementul Împrumuturilor**: Ciclu complet pentru împrumutarea, returnarea și prelungirea cărților.
+- **🔒 Autentificare Securizată**: Sistem de login bazat pe OTP (Parolă Unică) trimis prin email.
+- **📊 Panou de Bord în Timp Real**: Statistici live și actualizări de status.
 
-## 🛠️ Tech Stack
+## 🛠️ Stack Tehnologic
 
 ### Frontend
 - **Framework**: React 19 (Vite)
-- **Styling**: Tailwind CSS v4 (Custom Neumorphism Configuration)
+- **Stilizare**: Tailwind CSS v4 (Configurare Personalizată Neumorphism)
 - **State Management**: Context API
-- **Testing**: Vitest, React Testing Library
+- **Testare**: Vitest, React Testing Library
 
 ### Backend
 - **Runtime**: Node.js
 - **Framework**: Express.js
-- **Database**: PostgreSQL
+- **Bază de date**: PostgreSQL
 - **ORM**: Sequelize
-- **Testing**: Jest, Supertest
+- **Testare**: Jest, Supertest
 
-## 🚀 Getting Started
+## 🚀 Ghid de Pornire
 
-### Prerequisites
+### Cerințe Preliminare
 - Node.js (v18+)
-- PostgreSQL installed and running locally.
+- PostgreSQL instalat și rulând local.
 
-### Installation
+### Instalare
 
-1.  **Clone the repository**
+1.  **Clonează repository-ul**
     ```bash
-    git clone https://github.com/yourusername/virtual-library.git
+    git clone https://github.com/numele-tau/virtual-library.git
     cd virtual-library
     ```
 
-2.  **Backend Setup**
-    Navigate to the backend folder and install dependencies:
+2.  **Configurare Backend**
+    Navighează în folderul backend și instalează dependențele:
     ```bash
     cd backend
     npm install
     ```
 
-    **Database Configuration:**
-    We provide an interactive script to set up your database and environment variables automatically.
+    **Configurare Bază de Date:**
+    Oferim un script interactiv pentru a configura automat baza de date și variabilele de mediu.
     ```bash
     node setup_database.js
     ```
-    *Follow the on-screen prompts to enter your PostgreSQL credentials.*
+    *Urmează instrucțiunile de pe ecran pentru a introduce credențialele PostgreSQL.*
 
-    Start the server:
+    Pornește serverul:
     ```bash
     npm start
     ```
 
-3.  **Frontend Setup**
-    Open a new terminal, navigate to the frontend folder:
+3.  **Configurare Frontend**
+    Deschide un terminal nou, navighează în folderul frontend:
     ```bash
     cd ../frontend
     npm install
     ```
 
-    Start the development server:
+    Pornește serverul de dezvoltare:
     ```bash
     npm run dev
     ```
 
-4.  **Access the App**
-    Open [http://localhost:5173](http://localhost:5173) in your browser.
+4.  **Accesează Aplicația**
+    Deschide [http://localhost:5173](http://localhost:5173) în browserul tău.
 
-## 🧪 Running Tests
+## 🧪 Rulare Teste
 
-We have comprehensive test coverage for both ends of the stack.
+Avem acoperire completă de teste pentru ambele părți ale stack-ului.
 
-**Backend Integration Tests:**
+**Teste de Integrare Backend:**
 ```bash
 cd backend
 npm test
 ```
 
-**Frontend Component Tests:**
+**Teste Componente Frontend:**
 ```bash
 cd frontend
 npm test
 ```
 
-## 📖 Documentation
+## 📖 Documentație
 
-Detailed documentation is available in the repository:
-- [Architecture Overview](ARCHITECTURE.md) ([RO](ARCHITECTURE_RO.md))
-- [User Guide](USER_GUIDE.md) ([RO](USER_GUIDE_RO.md))
+Documentația detaliată este disponibilă în repository:
+- [Prezentare Arhitectură](ARCHITECTURE.md) ([RO](ARCHITECTURE_RO.md))
+- [Ghid de Utilizare](USER_GUIDE.md) ([RO](USER_GUIDE_RO.md))
 
-## 📄 License
+## 📄 Licență
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Acest proiect este licențiat sub Licența MIT - vezi fișierul [LICENSE](LICENSE) pentru detalii.

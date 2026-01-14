@@ -1,36 +1,36 @@
-# Architecture Overview - Virtual Library
+# Arhitectura Sistemului - Biblioteca Virtuală
 
-## System Overview
-The Virtual Library Manager is a full-stack web application designed to facilitate book management, borrowing, and user administration. It follows a client-server architecture with a clear separation of concerns.
+## Imagine de Ansamblu
+Managerul de Bibliotecă Virtuală este o aplicație web full-stack proiectată pentru gestionarea cărților, împrumuturilor și administrarea utilizatorilor. Arhitectura este de tip client-server, cu o separare clară a responsabilităților.
 
-### Tech Stack
+### Tehnologii Utilizate
 - **Frontend**: React 19, Vite, Tailwind CSS v4.
 - **Backend**: Node.js, Express.js.
-- **Database**: PostgreSQL (via Sequelize ORM).
-- **Authentication**: JWT & OTP (Email-based).
+- **Bază de date**: PostgreSQL (prin Sequelize ORM).
+- **Autentificare**: JWT & OTP (Bazată pe Email).
 
-## Directory Structure
+## Structura Directoarelor
 
 ### `/backend`
-- **`config/`**: Database configuration (`database.js`).
-- **`controllers/`**: Logic for handling requests (`authController`, `bookController`, `loanController`).
-- **`models/`**: Sequelize definitions (`User`, `Book`, `Loan`).
-- **`routes/`**: API endpoint definitions.
-- **`middleware/`**: Auth verification and role checking (`authMiddleware.js`).
-- **`tests/`**: Jest integration tests.
+- **`config/`**: Configurația bazei de date (`database.js`).
+- **`controllers/`**: Logica pentru procesarea cererilor (`authController`, `bookController`, `loanController`).
+- **`models/`**: Definițiile Sequelize (`User`, `Book`, `Loan`).
+- **`routes/`**: Definițiile endpoint-urilor API.
+- **`middleware/`**: Verificarea autentificării și a rolurilor (`authMiddleware.js`).
+- **`tests/`**: Teste de integrare Jest.
 
 ### `/frontend`
-- **`src/context/`**: Global state (`AuthContext`, `ModalContext`).
-- **`src/pages/`**: Role-based dashboards (`Student`, `Professor`, `Author`, `Librarian`, `Admin`).
-- **`src/services/`**: Axios instance for API communication.
-- **`src/tests/`**: Vitest component tests.
+- **`src/context/`**: Starea globală (`AuthContext`, `ModalContext`).
+- **`src/pages/`**: Dashboard-uri specifice rolurilor (`Student`, `Professor`, `Author`, `Librarian`, `Admin`).
+- **`src/services/`**: Instanța Axios pentru comunicarea cu API-ul.
+- **`src/tests/`**: Teste de componente Vitest.
 
-## Key Design Patterns
-1. **Neumorphism**: The UI uses a soft, plastic aesthetic achieved via shadow manipulation in CSS.
-2. **Context API**: Used for managing global Authentication state and Modals, avoiding prop drilling.
-3. **Role-Based Access Control (RBAC)**: Backend middleware strictly enforces roles (e.g., only Admin/Librarian can approve books).
+## Modele de Proiectare Cheie
+1. **Neumorphism**: Interfața utilizează o estetică "soft", plastică, realizată prin manipularea umbrelor în CSS.
+2. **Context API**: Utilizat pentru gestionarea stării globale de Autentificare și a Modalelor, evitând "prop drilling".
+3. **Role-Based Access Control (RBAC)**: Middleware-ul din backend impune strict rolurile (ex: doar Adminul/Bibliotecarul poate aproba cărți).
 
-## Database Schema
-- **Users**: Stores credentials, roles, and status (active/inactive).
-- **Books**: Stores metadata, PDF paths, cover image URLs, and stock count.
-- **Loans**: Junction table linking Users and Books, tracking due dates and status.
+## Schema Bazei de Date
+- **Users**: Stochează credențiale, roluri și status (activ/inactiv).
+- **Books**: Stochează metadate, căi către PDF, URL-uri pentru coperți și stocul disponibil.
+- **Loans**: Tabela de legătură între Utilizatori și Cărți, urmărind datele scadente și statusul.
