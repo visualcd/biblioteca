@@ -37,6 +37,7 @@ const LoginPage = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-[#e0e5ec] text-[#4a5568]">
             <div className="neu-card p-10 w-full max-w-md text-center">
+                <img src="/logo.png" alt="Logo Biblioteca" className="w-full h-auto max-w-[300px] mx-auto mb-6 object-contain drop-shadow-lg" />
                 <h1 className="text-3xl font-black mb-2 text-[#6d5dfc]">Autentificare</h1>
                 <p className="text-sm text-gray-500 mb-8">Bine ai revenit la Biblioteca Virtuală</p>
 

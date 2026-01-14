@@ -30,6 +30,7 @@ const RegisterPage = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-[#e0e5ec] text-[#4a5568] py-10">
             <div className="neu-card p-10 w-full max-w-lg">
+                <img src="/logo.png" alt="Logo Biblioteca" className="w-full h-auto max-w-[300px] mx-auto mb-6 object-contain drop-shadow-lg" />
                 <h1 className="text-3xl font-black mb-8 text-center text-[#6d5dfc]">Înregistrare</h1>
 
                 <form onSubmit={handleSubmit} className="space-y-6">

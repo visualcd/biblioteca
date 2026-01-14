@@ -474,12 +474,17 @@ const AuthorDashboard = () => {
         <div className="min-h-screen p-10 bg-[#e0e5ec] text-[#4a5568]">
             <div className="flex justify-between items-center mb-10">
                 <div>
-                    <h1 className="text-4xl font-black text-[#6d5dfc]">
-                        {getGreeting()}
-                    </h1>
-                    <p className="text-gray-500 font-bold mt-2 text-lg">
-                        Total Împrumuturi: <span className="text-[#6d5dfc]">{stats.loans}</span> 📚
-                    </p>
+                    <div className="flex flex-col items-start gap-2">
+                        <div className="w-48">
+                            <img src="/logo.png" alt="Logo" className="w-full h-auto object-contain drop-shadow-md" />
+                        </div>
+                        <h1 className="text-4xl font-black text-[#6d5dfc]">
+                            {getGreeting()}
+                        </h1>
+                        <p className="text-gray-500 font-bold mt-2 text-lg">
+                            Total Împrumuturi: <span className="text-[#6d5dfc]">{stats.loans}</span> 📚
+                        </p>
+                    </div>
                 </div>
 
                 <div className="flex gap-4">

@@ -180,7 +180,8 @@ const ProfessorDashboard = () => {
         <div className="min-h-screen flex bg-[#e0e5ec] text-[#4a5568]">
             {/* Sidebar */}
             <aside className="w-64 bg-[#e0e5ec] shadow-[5px_0_15px_rgba(0,0,0,0.05)] z-10 flex flex-col h-screen fixed left-0 top-0">
-                <div className="p-8">
+                <div className="p-6 flex flex-col items-center justify-center text-center">
+                    <img src="/logo.png" alt="Logo" className="w-full h-auto mb-4 drop-shadow-md block" />
                     <h1 className="text-2xl font-black text-[#6d5dfc]">{getGreeting()}</h1>
                     <p className="text-xs text-gray-400 mt-1">Gestiune Studenți</p>
                 </div>

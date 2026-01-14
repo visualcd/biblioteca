@@ -149,8 +149,12 @@ const AdminDashboard = () => {
     return (
         <div className="min-h-screen p-10 bg-[#e0e5ec] text-[#4a5568]">
             <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
-                <h1 className="text-4xl font-black text-[#6d5dfc] whitespace-nowrap">{getGreeting()}</h1>
-
+                <div className="flex flex-col items-start gap-2">
+                    <div className="w-48">
+                        <img src="/logo.png" alt="Logo" className="w-full h-auto object-contain drop-shadow-md" />
+                    </div>
+                    <h1 className="text-4xl font-black text-[#6d5dfc] whitespace-nowrap">{getGreeting()}</h1>
+                </div>
                 <div className="flex-1 w-full max-w-xl px-4">
                     <input
                         type="text"
