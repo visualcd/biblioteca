@@ -1,4 +1,4 @@
-const { Client } = require('pg');
+const { Client, escapeIdentifier } = require('pg');
 const readline = require('readline');
 const fs = require('fs');
 const path = require('path');
@@ -37,7 +37,7 @@ const setupDatabase = async () => {
 
         if (res.rowCount === 0) {
             console.log(`\nCreare bază de date '${dbName}'...`);
-            await client.query(`CREATE DATABASE "${dbName}"`);
+            await client.query(`CREATE DATABASE ${escapeIdentifier(dbName)}`);
             console.log('Baza de date a fost creată cu succes!');
         } else {
             console.log(`\nBaza de date '${dbName}' există deja.`);
